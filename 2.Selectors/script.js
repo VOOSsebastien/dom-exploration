@@ -27,7 +27,6 @@ el2.forEach(el3 => {
 
 let el4 = document.querySelectorAll("p");
 let el5 = document.querySelector("p");
-
 el4.forEach(el5 => {
     var titlep=el5.getAttribute('class');
     console.log(el5.innerText);
@@ -44,16 +43,9 @@ el4.forEach(el5 => {
             }
         }
         )
-
-
-
-////////////////////////////:
 function rand255(){
-     var random=Math.floor(Math.random() * 255 ) ;
+    var random=Math.floor(Math.random() * 255 ) ;
     var random1=Math.floor(Math.random() * 255 ) ;
-
     var random2=Math.floor(Math.random() * 255 ) ;
-
     return random3="rgb("+ random +","+ random1 +","+ random2 +")";
 }
-

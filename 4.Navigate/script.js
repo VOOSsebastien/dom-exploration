@@ -21,5 +21,5 @@ sectio[2].insertBefore(h22,h23);
 sectio[1].insertBefore(h23r,sectio[1].firstElementChild);
 
 sectio[2].remove();
-
+///cfr removeChild
 
