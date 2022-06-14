@@ -61,6 +61,7 @@ pwd.addEventListener("keyup", ()=>{
 /////////////
 //4.Finally, use a change listener on the <select> field to toggle a dark mode on the whole page. For ease of use, we'll say that the dark mode is just turning the background black and the text white.
 /////////////
+
 let z =document.getElementById("toggle-darkmode");
 let body=document.querySelector("body");
 z.addEventListener("change",()=>{
@@ -72,6 +73,3 @@ z.addEventListener("change",()=>{
         body.style.color="black";
     }
 })
-
-
-
