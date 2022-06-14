@@ -67,18 +67,24 @@ const body =document.querySelector("body");
 body.addEventListener('keydown', event => {
   if (event.code === 'Space') {
     body.style.backgroundColor=rand255();
-  }
-  const li = document.createElement("li");
+    const li = document.createElement("li");
     document.querySelector('ul').appendChild(li);
     li.innerText=("changement backgroundcolor ! And you press the spacebar "+getElapsedTime());
+  }
 })
 
 
-const list=document.querySelectorAll("li");
+
 body.addEventListener('keydown', event => {
   if (event.code === 'KeyL') {
-    list.remove();
-e.parentElement.removeChild(e)  }
+  let list=document.querySelectorAll("li");
+  console.log(list);
+  console.log("okokbojlncd");
+  for(i=0;i<list.length;i++){
+  list[i].remove();
+  console.log(list);
+  }
+  }
 })
 
 const actionSquares = document.querySelectorAll('.actionsquare')
