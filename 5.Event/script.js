@@ -37,30 +37,42 @@ var clickOnSquare = (e) => {
       ;
      break;
      default:
-       console.log("NTM");
+    console.log("NTM");
    }
 
     const li = document.createElement("li");
     document.querySelector('ul').appendChild(li);
     li.innerText=(art+" "+getElapsedTime());
-    let displayedsquares=document.querySelectorAll('.displayedsquare');
-
-    for(displayedsquare of displayedsquares){
-
-   if(div.className == "displayedsquare green"){
-    displayedsquare.addEventListener('click',()=>{alert("green")})
-  }
-
-  if(div.className == "displayedsquare violet"){
-    displayedsquare.addEventListener('click',()=>{alert("violet")})
-  }
-
-  if(div.className == "displayedsquare orange"){
-    displayedsquare.addEventListener('click',()=>{alert("orange")})
-  }
-
+    let displayedSquareSS =document.getElementsByClassName("displayedsquare")
+    console.log(displayedSquareSS);
+    var S = displayedSquareSS;
+    for ( let displayedsquare of S) {
+      displayedsquare.addEventListener('click', clickOnDisSquare)
+    }
 }
+  //////////////////////////
+  //pop-up///////////
+  ///////////////////////////
+var clickOnDisSquare = (S) => {
+  console.log(S);
+  if (S.target.classList.contains("green") === true) {
+    alert("Green");
+  } else if (S.target.classList.contains("violet") === true) {
+    alert("Violet");
+  } else if (S.target.classList.contains("orange") === true) {
+    alert("Orange");
+  }  
 }
+
+//////:
+/*
+
+    */
+   ////
+
+///////////////
+////////////////SPACE///////////////
+//////////////////////////////////
 const body =document.querySelector("body");
 body.addEventListener('keydown', event => {
   if (event.code === 'Space') {
@@ -71,6 +83,9 @@ body.addEventListener('keydown', event => {
   }
 })
 
+/////////////////
+////////////LKEY//
+/////////////////
 body.addEventListener('keydown', event => {
   if (event.code === 'KeyL') {
   let list=document.querySelectorAll("li");
@@ -82,6 +97,10 @@ body.addEventListener('keydown', event => {
   }
   }
 })
+
+/////////////////
+////////////SKEY//
+/////////////////
 let displayedsquares=document.querySelectorAll('.displayedsquare');
 body.addEventListener('keydown', event => {
   if (event.code === 'KeyS') {
@@ -99,7 +118,9 @@ for (let actionSquare of actionSquares) {
   actionSquare.addEventListener('click', clickOnSquare)
 }
 
-
+//////////////////////////
+///////rnadomcolor//
+//////////////////////
 
 function rand255(){
   var random=Math.floor(Math.random() * 255 ) ;
