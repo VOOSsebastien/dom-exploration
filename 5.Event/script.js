@@ -61,8 +61,6 @@ var clickOnSquare = (e) => {
 
 }
 }
-
-
 const body =document.querySelector("body");
 body.addEventListener('keydown', event => {
   if (event.code === 'Space') {
@@ -73,8 +71,6 @@ body.addEventListener('keydown', event => {
   }
 })
 
-
-
 body.addEventListener('keydown', event => {
   if (event.code === 'KeyL') {
   let list=document.querySelectorAll("li");
@@ -84,6 +80,17 @@ body.addEventListener('keydown', event => {
   list[i].remove();
   console.log(list);
   }
+  }
+})
+let displayedsquares=document.querySelectorAll('.displayedsquare');
+body.addEventListener('keydown', event => {
+  if (event.code === 'KeyS') {
+    let displayedsquares=document.querySelectorAll('.displayedsquare');
+  console.log(displayedsquares);
+  for(i=0;i<displayedsquares.length;i++){
+    displayedsquares[i].remove();
+  }
+  console.log(displayedsquares);
   }
 })
 
